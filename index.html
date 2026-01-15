@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MiniArcade</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="topbar">
+        <h1 class="logo">MiniArcade</h1>
+        <nav id="tabs" class="tabs" aria-label="Selector de juegos"></nav>
+      </header>
+
+      <main class="content">
+        <section class="game-card" aria-live="polite">
+          <div id="game-container" class="game-container">
+            <div id="runtime-warning" class="runtime-warning" hidden>
+              Para jugar necesitás abrir esta página con un servidor local
+              (por ejemplo, <strong>npx serve</strong> o Live Server). Los
+              módulos de JavaScript no se cargan correctamente si abrís el
+              archivo directo con <strong>file://</strong>.
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script>
+      if (location.protocol === "file:") {
+        const warning = document.getElementById("runtime-warning");
+        if (warning) {
+          warning.hidden = false;
+        }
+      }
+    </script>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
