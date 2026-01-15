@@ -15,11 +15,27 @@
 
       <main class="content">
         <section class="game-card" aria-live="polite">
+          <div id="game-container" class="game-container">
+            <div id="runtime-warning" class="runtime-warning" hidden>
+              Para jugar necesitás abrir esta página con un servidor local
+              (por ejemplo, <strong>npx serve</strong> o Live Server). Los
+              módulos de JavaScript no se cargan correctamente si abrís el
+              archivo directo con <strong>file://</strong>.
+            </div>
+          </div>
           <div id="game-container" class="game-container"></div>
         </section>
       </main>
     </div>
 
+    <script>
+      if (location.protocol === "file:") {
+        const warning = document.getElementById("runtime-warning");
+        if (warning) {
+          warning.hidden = false;
+        }
+      }
+    </script>
     <script type="module" src="./app.js"></script>
   </body>
 </html>

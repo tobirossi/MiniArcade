@@ -116,6 +116,18 @@ body {
   opacity: 0;
 }
 
+.runtime-warning {
+  max-width: 560px;
+  background: rgba(255, 122, 242, 0.1);
+  border: 1px solid rgba(255, 122, 242, 0.35);
+  padding: 18px 22px;
+  border-radius: 14px;
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
 .game-panel {
   width: min(560px, 100%);
   display: flex;
