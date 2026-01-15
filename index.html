@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MiniArcade</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="topbar">
+        <h1 class="logo">MiniArcade</h1>
+        <nav id="tabs" class="tabs" aria-label="Selector de juegos"></nav>
+      </header>
+
+      <main class="content">
+        <section class="game-card" aria-live="polite">
+          <div id="game-container" class="game-container"></div>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
